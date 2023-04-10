@@ -1,0 +1,96 @@
+@import url(/Sass/cssreload.css);
+
+$Blue: #295494;
+$Gray: #555555;
+
+body{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    text-align: center;
+}
+
+.container-circle::before {
+    content: '';
+    background-color: $Gray;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    }
+.container-circle{
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+
+    .progreso{
+        background-color: $Blue;
+        position:absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 0%;
+        z-index: -1;
+        transition: 0.5s ease;
+    }
+
+    .circle{
+        border-radius: 50%;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: #555555;
+        border: 2px solid $Gray;
+        transition: 0.5s ease;
+    }
+
+   
+    
+    .activo{
+        border:2px solid $Blue;
+        
+        
+    }
+}
+
+
+    .btn{
+
+        background-color: $Blue;
+        border: none;
+        color: white;
+        border-radius: 10px;
+        padding: 20px;
+        
+
+    }
+
+    .btn:active{
+        transform: scale(0.98);
+    }
+    .btn:focus{
+        outline: 0;
+    }
+
+    .btn:disabled{
+        background-color: $Gray;
+        cursor: not-allowed;
+    }
+    
